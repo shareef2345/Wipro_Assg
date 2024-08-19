@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Page</title>
+  <style>
+    /* CSS for positioning links */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .top-link, .bottom-link {
+      position: fixed;
+      background: lightblue;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+    }
+    .top-link {
+      top: 0;
+    }
+    .bottom-link {
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#bottom" class="top-link">Scroll to Bottom</a>
+  <p><!-- Add content to create scrolling --></p>
+  <a id="bottom"></a> <!-- Anchor for bottom link position -->
+  <a href="#top" class="bottom-link">Scroll to Top</a>
+
+  <!-- Content to create a scrollable page -->
+  <div style="height: 2000px;">
+    Scroll down to see the bottom link.
+  </div>
+</body>
+</html>

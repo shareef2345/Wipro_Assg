@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor & Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 50%;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h2>Visitor Information</h2>
+        <hr>
+        <table>
+            <tr>
+                <td>Email Address:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>User's Interest:</td>
+                <td><input type="checkbox" id="web"> <label for="web">Web for research</label><br>
+                    <input type="checkbox" id="purchase"> <label for="purchase">Web for purchase</label></td>
+            </tr>
+            <tr>
+                <td>Occupation:</td>
+                <td>
+                    <select>
+                        <option value="select">Select One</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Want us to send you junk emails?</td>
+                <td>
+                    <input type="radio" id="absolutely" name="emailPref"> <label for="absolutely">Absolutely</label><br>
+                    <input type="radio" id="noWay" name="emailPref"> <label for="noWay">No way man</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <br>
+        <h2>Registration Form</h2>
+        <hr>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username"><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password"><br><br>
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword"><br><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name"><br><br>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender"> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender"> <label for="female">Female</label><br><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" rows="4" cols="30"></textarea><br><br>
+            <label for="profession">Profession:</label><br>
+            <select id="profession">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="engineer">Engineer</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</div>
+</body>
+</html>

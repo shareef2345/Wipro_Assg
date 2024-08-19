@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor & Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 50%;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h2>Visitor Information</h2>
+        <hr>
+        <form>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label>User's Interest:</label><br>
+            <input type="checkbox" id="webResearch" name="interest" value="research"> <label for="webResearch">Web for research</label><br>
+            <input type="checkbox" id="webPurchase" name="interest" value="purchase"> <label for="webPurchase">Web for purchase</label><br><br>
+            <label for="occupation">Occupation:</label><br>
+            <select id="occupation" name="occupation">
+                <option value="select" disabled selected>Select One</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="engineer">Engineer</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label>Want us to send you junk emails?</label><br>
+            <input type="radio" id="absolutely" name="emailPref" value="absolutely"> <label for="absolutely">Absolutely</label><br>
+            <input type="radio" id="noWay" name="emailPref" value="noway"> <label for="noWay">No way man</label><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <div>
+        <br>
+        <h2>Registration Form</h2>
+        <hr>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label><br><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
+            <label for="profession">Profession:</label><br>
+            <select id="profession" name="profession" required>
+                <option value="select" disabled selected>Select One</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="engineer">Engineer</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</div>
+</body>
+</html>
