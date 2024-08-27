@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Time Display</title>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <input type="text" id="timeDisplay" readonly>
+
+    <script>
+        function updateTime() {
+            const timeTextbox = document.getElementById('timeDisplay');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentTime = hours + ":" + minutes + ":" + seconds;
+            timeTextbox.value = currentTime;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display the time immediately
+        updateTime();
+    </script>
+</body>
+</html>

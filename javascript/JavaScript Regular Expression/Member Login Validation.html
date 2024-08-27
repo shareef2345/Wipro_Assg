@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login Validation</title>
+    <script>
+        function validateForm() {
+            const memberNumber = document.forms["myForm"]["memberNumber"].value;
+            const password = document.forms["myForm"]["password"].value;
+
+            if (memberNumber === "") {
+                alert("Member number must be entered");
+                document.forms["myForm"]["memberNumber"].focus();
+                return false;
+            }
+
+            if (isNaN(memberNumber)) {
+                alert("Member number must be a number");
+                document.forms["myForm"]["memberNumber"].focus();
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password must be entered");
+                document.forms["myForm"]["password"].focus();
+                return false;
+            }
+
+            if (password.length <= 4) {
+                alert("Password must be longer than 4 characters");
+                document.forms["myForm"]["password"].focus();
+                return false;
+            }
+
+            // Phone Number Validation specific code can be included here if needed
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Member Login Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()">
+        Member Number: <input type="text" name="memberNumber"><br>
+        Password: <input type="password" name="password"><br><br>
+        <!-- Additional form fields can be added here -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Validation</title>
+    <script>
+        function validatePhoneNumber(phoneNumber) {
+            const phoneRegex = /^(?:\(\d{3}\)|\d{3})[-. ]?\d{3}[-. ]?\d{4}$/;
+            return phoneRegex.test(phoneNumber);
+        }
+
+        function validateForm() {
+            const phoneNumber = document.forms["myForm"]["phoneNumber"].value;
+
+            if (phoneNumber === "") {
+                alert("Phone number must be entered");
+                document.forms["myForm"]["phoneNumber"].focus();
+                return false;
+            }
+
+            if (!validatePhoneNumber(phoneNumber)) {
+                alert("Phone number must be in the format XXX-XXX-XXXX, XXX.XXX.XXXX, or XXX XXX XXXX");
+                document.forms["myForm"]["phoneNumber"].focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Phone Number Validation</h1>
+    <form name="myForm" onsubmit="return validateForm()">
+        Phone Number: <input type="text" name="phoneNumber"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

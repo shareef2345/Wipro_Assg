@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Demo</title>
+    <script>
+        // a. Alert today's date
+        function alertTodaysDate() {
+            const today = new Date().toDateString();
+            alert("Today's date is: " + today);
+        }
+
+        // b. Prompt for user's name and display a greeting alert
+        function greetUser() {
+            const username = prompt("Please enter your name:");
+            alert("Hello, " + username + "!");
+        }
+
+        // c. Prompt for two numbers and display the sum
+        function alertSumOfNumbers() {
+            const num1 = parseFloat(prompt("Enter the first number:"));
+            const num2 = parseFloat(prompt("Enter the second number:"));
+            const sum = num1 + num2;
+            alert("The sum of the two numbers is: " + sum);
+        }
+    </script>
+</head>
+<body>
+    <h1>Interaction Demo</h1>
+    <button onclick="alertTodaysDate()">Show Today's Date</button>
+    <button onclick="greetUser()">Greet User</button>
+    <button onclick="alertSumOfNumbers()">Alert Sum of Numbers</button>
+</body>
+</html>

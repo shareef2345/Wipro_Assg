@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Characters from String</title>
+</head>
+<body>
+    <h1>Remove Characters from String</h1>
+    <p id="modifiedString"></p>
+
+    <script>
+        function removeCharacters(str, numToRemove) {
+            return str.substring(0, str.length - numToRemove);
+        }
+
+        const originalString = "hello world";
+        const modifiedString = removeCharacters(originalString, 5);
+        document.getElementById('modifiedString').innerText = "Modified String: " + modifiedString;
+    </script>
+</body>
+</html>

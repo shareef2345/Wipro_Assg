@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Occurrence of "World"</title>
+</head>
+<body>
+    <h1>First Occurrence of "World"</h1>
+    <p id="position"></p>
+
+    <script>
+        let txt = "Hello World! It's a beautiful world.";
+        let position = txt.indexOf("World");
+        document.getElementById('position').innerText = "The position of the first occurrence of 'World' is: " + position;
+    </script>
+</body>
+</html>
